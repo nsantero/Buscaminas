@@ -70,6 +70,22 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Build\$(Platform)$(Configuration)\bin</OutDir>
+    <IntDir>$(SolutionDir)Build\$(Platform)$(Configuration)\Intermediate</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Build\$(Platform)$(Configuration)\bin</OutDir>
+    <IntDir>$(SolutionDir)Build\$(Platform)$(Configuration)\Intermediate</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Build\$(Platform)$(Configuration)\bin</OutDir>
+    <IntDir>$(SolutionDir)Build\$(Platform)$(Configuration)\Intermediate</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Build\$(Platform)$(Configuration)\bin</OutDir>
+    <IntDir>$(SolutionDir)Build\$(Platform)$(Configuration)\Intermediate</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -135,7 +151,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Celda.cpp" />
+    <ClCompile Include="CeldaBomba.cpp" />
+    <ClCompile Include="CeldaSinBomba.cpp" />
+    <ClCompile Include="Dibujador.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mapaDeTexturas.cpp" />
+    <ClCompile Include="MatrizDelJuego.cpp" />
+    <ClCompile Include="Texturas.cpp" />
+    <ClCompile Include="TexturasGlobal.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Celda.h" />
+    <ClInclude Include="CeldaBomba.h" />
+    <ClInclude Include="Celdas.h" />
+    <ClInclude Include="CeldaSinBomba.h" />
+    <ClInclude Include="Dibujador.h" />
+    <ClInclude Include="estadoDeLaPartidaEnum.h" />
+    <ClInclude Include="mapaDeTexturas.h" />
+    <ClInclude Include="MatrizDelJuego.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Texturas.h" />
+    <ClInclude Include="TexturasGlobal.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Buscamina.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
