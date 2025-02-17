@@ -65,3 +65,8 @@ void Celda::cambiarTextura(const sf::Texture& nueva)
 	sprite.setTexture(nueva);
 }
 
+void Celda::moverCelda(int x, int y)
+{
+	sprite.setPosition(sprite.getPosition()+sf::Vector2f{(float)x,(float)y});
+}
+

@@ -13,7 +13,17 @@ int CeldaBomba::revelar()
 int CeldaBomba::ponerBandera()
 {
 	bandera = !bandera;
-	return 0;
+	
+	
+	if (bandera) {
+		sprite.setTexture(texturas.bandera);
+		return 1;
+	}
+	else {
+		sprite.setTexture(texturas.celdaOculta);
+		return 2;
+	}
+
 }
 
 void CeldaBomba::numeralIncremento(int suma)

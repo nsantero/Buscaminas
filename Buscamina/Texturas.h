@@ -11,7 +11,13 @@ public:
 	sf::Texture bomba;
 	sf::Texture bandera;
 
-	Texturas();
+	sf::Texture numerador[12];
 
+	sf::Texture caritaLentes;
+	sf::Texture caritaMuerta;
+	sf::Texture caritaJugando;
+
+	Texturas();
+	
 };
 

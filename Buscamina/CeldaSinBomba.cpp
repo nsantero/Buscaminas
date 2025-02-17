@@ -20,8 +20,26 @@ int CeldaSinBomba::revelar()
 
 int CeldaSinBomba::ponerBandera()
 {
-	bandera = !bandera;
-	return 0;
+	if (!visible) {
+		bandera = !bandera;
+		if (bandera) {
+			sprite.setTexture(texturas.bandera);
+			return 0;
+		}
+		else {
+			sprite.setTexture(texturas.celdaOculta);
+			return 4;
+		}
+		
+		
+	}
+	else if (numeral) {
+		//revelar las q tiene al costado
+		return 3;
+	}
+	else {
+		return 0;
+	}
 }
 
 int CeldaSinBomba::getNumeral()

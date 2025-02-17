@@ -3,5 +3,6 @@
 enum class EstadoDeLaPartida {
 	NOEMPEZADA,
 	EMPEZADA,
-	PERDIDA
+	PERDIDA,
+	GANADA
 };
